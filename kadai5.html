@@ -5,13 +5,23 @@
     <title>createElement, appendChild</title>
     <script type="text/javascript">
 
-      function addItem()
+function addItem()
       {
 		  var bookmark = document.getElementById('bookmark');
 		  var row = document.createElement('li');
+
+     var linkname= document.createElement('li');
+     linkname.innerHTML=document.getElementById('linkname').value;
+     row.appendChild(linkname);
+
+      bookmark.appendChild(row);
+      }
+
+
 		  // 課題：
 		  // row の中に id:linkname のテキストを入れてから
 		  // bookmark に appendChild しなさい。
+     
 
 		  // 発展課題：
 		  // その代わりに、createElement('a') でアンカータグを生成し、
@@ -23,7 +33,7 @@
 		  // 　いちおう、ちゃんと createElement してみましょう）
 		  // https://www.w3schools.com/jsref/prop_link_href.asp
 
-      }
+    
 
     </script>
   </head>
